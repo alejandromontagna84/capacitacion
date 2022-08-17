@@ -3,4 +3,7 @@
 	<preference for="Improntus\CustomerCode\Api\CustomerRepositoryInterface" type="Improntus\CustomerCode\Model\CustomerRepository"/>
 	<preference for="Improntus\CustomerCode\Api\Data\CustomerInterface" type="Improntus\CustomerCode\Model\Customer"/>
 	<preference for="Improntus\CustomerCode\Api\Data\CustomerSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+    <type name="Magento\Customer\Model\Customer">
+        <plugin name="Improntus_CustomerCode_Plugin_Magento_Customer_Model_Customer" type="Improntus\CustomerCode\Plugin\Magento\Customer\Model\Customer" sortOrder="10" disabled="false"/>
+    </type>
 </config>
