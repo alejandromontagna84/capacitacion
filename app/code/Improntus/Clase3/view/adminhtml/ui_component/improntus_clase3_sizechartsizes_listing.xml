@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+	<argument name="data" xsi:type="array">
+		<item name="js_config" xsi:type="array">
+			<item name="provider" xsi:type="string">improntus_clase3_sizechartsizes_listing.improntus_clase3_sizechartsizes_listing_data_source</item>
+		</item>
+	</argument>
+	<settings>
+		<spinner>improntus_clase3_sizechartsizes_columns</spinner>
+		<deps>
+			<dep>improntus_clase3_sizechartsizes_listing.improntus_clase3_sizechartsizes_listing_data_source</dep>
+		</deps>
+        <buttons>
+            <button name="add">
+                <url path="*/*/new"/>
+                <class>primary</class>
+                <label translate="true">Add new SizeChart Size</label>
+            </button>
+        </buttons>
+	</settings>
+	<dataSource name="improntus_clase3_sizechartsizes_listing_data_source" component="Magento_Ui/js/grid/provider">
+		<settings>
+			<storageConfig>
+				<param name="indexField" xsi:type="string">entity_id</param>
+			</storageConfig>
+			<updateUrl path="mui/index/render"/>
+		</settings>
+		<aclResource>Improntus_Clase3::SizeChartSizes</aclResource>
+		<dataProvider name="improntus_clase3_sizechartsizes_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+			<settings>
+				<requestFieldName>id</requestFieldName>
+				<primaryFieldName>entity_id</primaryFieldName>
+			</settings>
+		</dataProvider>
+	</dataSource>
+	<listingToolbar name="listing_top">
+		<settings>
+			<sticky>true</sticky>
+		</settings>
+		<bookmark name="bookmarks"/>
+		<columnsControls name="columns_controls"/>
+		<filters name="listing_filters"/>
+		<paging name="listing_paging"/>
+	</listingToolbar>
+	<columns name="improntus_clase3_sizechartsizes_columns">
+		<selectionsColumn name="ids">
+			<settings>
+				<indexField>entity_id</indexField>
+			</settings>
+		</selectionsColumn>
+		<column name="entity_id">
+			<settings>
+				<filter>text</filter>
+				<sorting>asc</sorting>
+				<label translate="true">ID</label>
+			</settings>
+		</column>
+		<column name="size_label">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">Size Label</label>
+			</settings>
+		</column>
+        <column name="values">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">Values</label>
+			</settings>
+		</column>
+        <column name="size_chart_id" class="Improntus\Clase3\Ui\Component\Listing\Column\SizeChart">
+			<settings>
+				<filter>text</filter>
+				<label translate="true">Size Chart</label>
+			</settings>
+		</column>
+          <actionsColumn name="actions" class="Improntus\Clase3\Ui\Component\Listing\Column\SizeChartSizesActions">
+            <settings>
+                <indexField>entity_id</indexField>
+                <resizeEnabled>false</resizeEnabled>
+                <resizeDefaultWidth>107</resizeDefaultWidth>
+            </settings>
+        </actionsColumn>
+	</columns>
+</listing>

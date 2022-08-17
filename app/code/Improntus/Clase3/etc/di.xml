@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<!--sizeCharts-->
+    <virtualType name="Improntus\Clase3\Model\ResourceModel\SizeChart\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">size_chart</argument>
+			<argument name="resourceModel" xsi:type="string">Improntus\Clase3\Model\ResourceModel\SizeChart\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="improntus_clase3_sizechart_listing_data_source" xsi:type="string">Improntus\Clase3\Model\ResourceModel\SizeChart\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+    <!--sizeCharts Sizes-->
+    <virtualType name="Improntus\Clase3\Model\ResourceModel\SizeChartSizes\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">size_chart_sizes</argument>
+			<argument name="resourceModel" xsi:type="string">Improntus\Clase3\Model\ResourceModel\SizeChartSizes\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="improntus_clase3_sizechartsizes_listing_data_source" xsi:type="string">Improntus\Clase3\Model\ResourceModel\SizeChartSizes\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

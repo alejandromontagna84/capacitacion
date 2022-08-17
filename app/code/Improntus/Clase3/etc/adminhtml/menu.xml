@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Improntus::top_level" title="Improntus" module="Improntus_Clase3" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Improntus_Clase3::improntus_clase3_sizechart" title="Size Chart" module="Improntus_Clase3" sortOrder="9999" resource="Magento_Backend::content" parent="Improntus::top_level" action="improntus_clase3/sizechart/index"/>
+		<add id="Improntus_Clase3::improntus_clase3_sizechartsizes" title="Size Chart Sizes" module="Improntus_Clase3" sortOrder="9999" resource="Magento_Backend::content" parent="Improntus::top_level" action="improntus_clase3/sizechartsizes/index"/>
+	</menu>
+</config>

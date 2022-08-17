@@ -1,0 +1,11 @@
+<?php
+/**
+ * @var $block Improntus\Clase3\Block\Index\Index
+ */
+$collection = $block->getSizes();?>
+<dl>
+    <?php foreach ($collection as $size):?>
+        <dt><?php echo $size->getSizeLabel(); ?></dt>
+        <dd><?php echo $size->getValues(); ?></dd>
+     <?php endforeach;?>
+</dl>

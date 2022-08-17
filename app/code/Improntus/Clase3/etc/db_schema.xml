@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <!-- objetivo 1-->
+    <table name="size_chart" resource="default" engine="innodb" comment="improntus_clase3_sizechart Table">
+        <column xsi:type="int" name="entity_id" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <column name="title" nullable="true" xsi:type="varchar" comment="Title" length="255"/>
+        <column name="type" nullable="true" xsi:type="varchar" comment="Type" length="255"/>
+        <column name="created_at" nullable="true" xsi:type="datetime" comment="Created at"/>
+        <constraint xsi:type="unique" referenceId="SIZECHART_TITLE">
+            <column name="title"/>
+        </constraint>
+    </table>
+    <!-- objetivo 2-->
+    <table name="size_chart_sizes" resource="default" engine="innodb" comment="improntus_clase3_sizechart Table">
+        <column xsi:type="int" name="entity_id"  unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <column xsi:type="int" name="size_chart_id" unsigned="true" nullable="false" comment="Size Chart Id"/>
+        <column xsi:type="varchar" name="size_label" nullable="true"  comment="Size Label" length="255"/>
+        <column xsi:type="text" name="values" nullable="true"  comment="Values"/>
+        <constraint
+            xsi:type="unique"
+            referenceId="SIZE_CHART_SIZES_SIZE_CHART_ID_SIZE_LABEL">
+            <column name="size_chart_id"/>
+            <column name="size_label"/>
+        </constraint>
+        <!--constraint
+            xsi:type="foreign"
+            referenceId="SIZE_CHART_SIZES_ENTITY_ID_SIZE_CHART_ENTITY_ID"
+            table="size_chart_sizes"
+            column="entity_id"
+            referenceTable="size_chart"
+            referenceColumn="entity_id"
+        /-->
+    </table>
+</schema>

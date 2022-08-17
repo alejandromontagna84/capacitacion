@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="admin">
+		<route frontName="improntus_clase3" id="improntus_clase3">
+			<module before="Magento_Backend" name="Improntus_Clase3"/>
+		</route>
+	</router>
+</config>

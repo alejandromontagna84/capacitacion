@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Improntus\CustomerCode\Api\CustomerRepositoryInterface" type="Improntus\CustomerCode\Model\CustomerRepository"/>
+	<preference for="Improntus\CustomerCode\Api\Data\CustomerInterface" type="Improntus\CustomerCode\Model\Customer"/>
+	<preference for="Improntus\CustomerCode\Api\Data\CustomerSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+</config>
