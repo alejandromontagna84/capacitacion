@@ -1,13 +1,18 @@
 <?xml version="1.0" ?>
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
-	<table name="improntus_customercode_customer" resource="default" engine="innodb" comment="improntus_customercode_customer Table">
+	<table name="customer_code" resource="default" engine="innodb" comment="customercode Table">
 		<column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
 		<constraint xsi:type="primary" referenceId="PRIMARY">
 			<column name="entity_id"/>
 		</constraint>
-		<column name="customer_id" nullable="true" xsi:type="text" comment="Customer Id"/>
-		<column name="code" nullable="true" xsi:type="text" comment="code"/>
-		<column name="created_at" nullable="true" xsi:type="text" comment="Created At"/>
-		<column name="updated_at" nullable="true" xsi:type="text" comment="Updated At"/>
+		<column name="customer_id" xsi:type="int" comment="Customer Id"/>
+		<column name="code" xsi:type="varchar" length="40"  comment="code"/>
+		<column name="created_at" xsi:type="timestamp" comment="Created At"/>
+		<column name="updated_at" xsi:type="timestamp" comment="Updated At"/>
+        <constraint xsi:type="unique" referenceId="">
+            <column name="entity_id"/>
+            <column name="customer_id"/>
+            <column name="code"/>
+        </constraint>
 	</table>
 </schema>

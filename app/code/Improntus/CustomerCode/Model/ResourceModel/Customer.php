@@ -17,7 +17,7 @@ class Customer extends AbstractDb
      */
     protected function _construct()
     {
-        $this->_init('improntus_customercode_customer', 'customer_id');
+        $this->_init('customer_code', 'entity_id');
     }
 }
 
