@@ -1,12 +1,12 @@
 <?php
 
 namespace Improntus\CustomerCode\Plugin\Magento\Customer\Model;
-
+use \Magento\Customer\Model\Customer as Subject;
 class Customer
 {
 
     public function aroundSave(
-        \Magento\Customer\Model\Customer $subject,
+        Subject $subject,
         \Closure $proceed
     ) {
 

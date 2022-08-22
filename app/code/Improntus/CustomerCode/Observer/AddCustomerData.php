@@ -1,7 +1,9 @@
 <?php
 namespace Improntus\CustomerCode\Observer;
+
 use Magento\Framework\Event\ObserverInterface;
 use \Improntus\CustomerCode\Model\CustomerFactory;
+
 class AddCustomerData implements ObserverInterface
 {
     public function __construct(

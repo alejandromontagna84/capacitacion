@@ -1,6 +1,6 @@
 <?php
 namespace Improntus\CustomerPurchases\Observer;
-use GraphQL\Server\Helper;
+
 use \Magento\Store\Model\StoreManagerInterface;
 use \Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
 use Magento\Framework\Event\ObserverInterface;
