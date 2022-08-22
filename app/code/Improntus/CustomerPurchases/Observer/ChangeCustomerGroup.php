@@ -14,7 +14,7 @@ class ChangeCustomerGroup implements ObserverInterface
         StoreManagerInterface $storeManager,
         CollectionFactory $orderCollectionFactory,
         CustomerFactory $customerFactory,
-        Helper $helper
+        Data $helper
     ){
         $this->storeManager = $storeManager;
         $this->orderCollectionFactory = $orderCollectionFactory;

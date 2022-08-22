@@ -1,19 +1,14 @@
 <?php
 namespace Improntus\CustomerPurchases\Helper;
+use \Magento\Framework\App\Config\ScopeConfigInterface;
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
-    /**
-    * @var \Magento\Framework\App\Config\ScopeConfigInterface
-    */
-    protected $scopeConfig;
 
-    /**
-    * Recipient email config path
-    */
     const XML_PATH_IS_ENABLED = 'customer_purchases/config/active';
 
-    public function __construct(\Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig)
-    {
+    public function __construct(
+        ScopeConfigInterface $scopeConfig
+    ){
         $this->scopeConfig = $scopeConfig;
     }
 
